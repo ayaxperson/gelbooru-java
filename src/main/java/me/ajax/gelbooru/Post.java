@@ -1,4 +1,4 @@
-package me.ajax.boorus;
+package me.ajax.gelbooru;
 
 public record Post(
         String previewURL,

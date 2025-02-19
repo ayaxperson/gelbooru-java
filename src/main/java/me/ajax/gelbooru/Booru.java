@@ -1,4 +1,4 @@
-package me.ajax.boorus;
+package me.ajax.gelbooru;
 
 import java.io.IOException;
 import java.net.URISyntaxException;

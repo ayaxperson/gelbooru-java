@@ -1,4 +1,4 @@
-package me.ajax.boorus;
+package me.ajax.gelbooru;
 
 import java.io.BufferedReader;
 import java.io.IOException;
