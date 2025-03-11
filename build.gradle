@@ -1,14 +1,7 @@
 plugins {
     id 'java'
+    id 'maven-publish'
 }
 
-group = 'me.ajax.gelbooru-java'
+group = 'com.github.ayaxperson'
 version = '1.0 '
-
-repositories {
-    mavenCentral()
-}
-
-dependencies {
-    implementation 'org.jsoup:jsoup:1.18.3'
-}
