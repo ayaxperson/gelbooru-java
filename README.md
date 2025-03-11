@@ -1,3 +1,3 @@
-### Booru API
+### gelbooru-java
 
-A simple Java library for interacting with booru-style imageboards. Currently only supports gelbooru based websites.
+A simple Java library for interacting with gelbooru based websites.
