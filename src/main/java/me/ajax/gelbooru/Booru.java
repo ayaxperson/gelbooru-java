@@ -27,7 +27,10 @@ public class Booru {
         final String received = NetUtils.read(url);
 
         if (received.isBlank())
-            return new Page(new Post[0]);
+            throw new IOException("Blank response");
+
+        if (!received.startsWith("[") && !received.startsWith("{"))
+            throw new IOException("Invalid response (probably invalid URL or Booru blocking API access)");
 
         final String[] entries = received.split("\\{|},?");
         final List<Post> posts = new ArrayList<>();
@@ -42,6 +45,10 @@ public class Booru {
 
             for (final String dataEntry : data) {
                 final String[] split = dataEntry.split("\":");
+
+                if (split.length < 2)
+                    continue;
+
                 final String key = split[0].startsWith("\"") ? split[0].substring(1) : split[0];
                 final String value = split[1];
                 parsedData.put(key, value);
